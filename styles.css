@@ -5,8 +5,6 @@
 }
 
 :root {
-    font-size: 16px;
-
     --blue: #004260;
     --pink: #ED145B;
     --gray: #939598;
@@ -35,12 +33,12 @@ nav div:not(.triangle) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8rem;
+    width: 8em;
     transition: width 0.3s;
 }
   
 nav div:hover:not(.triangle) {
-    width: 10rem;
+    width: 10em;
     cursor: pointer;
 }
 
@@ -131,7 +129,7 @@ nav div:hover:not(.triangle) {
 }
 
 @media (max-width: 740px) {
-    html {
+    nav div:not(.triangle) {
         font-size: 12px;
     }
 }
