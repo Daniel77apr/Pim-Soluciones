@@ -124,7 +124,7 @@ nav div:hover:not(.triangle) {
 
     .image {
         width: 100vw;
-        content: url(/Images/image2.png)
+        content: url(Images/image2.png)
     }
 }
 
