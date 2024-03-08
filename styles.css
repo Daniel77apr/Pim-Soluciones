@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #004260;
+    --pink: #ED145B;
+    --gray: #939598;
+    --light-blue: #80A1B0;
+
+    --nav-height: 40px;
+    --inclination: 23px;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+/* NAV-BAR */
+
+nav {
+    display: flex;
+    height: var(--nav-height);
+    box-shadow: calc(-1 * (var(--inclination) + 5px)) 1px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    color: white;
+    text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+  
+nav div:not(.triangle) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    transition: width 0.3s;
+}
+  
+nav div:hover:not(.triangle) {
+    width: 10rem;
+    cursor: pointer;
+}
+
+.first, .third, .fifth {
+    background-color: var(--blue);
+}
+
+.second, .fourth {
+    background-color: var(--light-blue);
+}
+
+.triangle:nth-of-type(2), .triangle:nth-of-type(6){
+    border-left: var(--inclination) solid var(--blue);
+    border-bottom: var(--nav-height) solid var(--light-blue);
+}
+
+.triangle:nth-of-type(4) {
+    border-left: var(--inclination) solid var(--light-blue);
+    border-bottom: var(--nav-height) solid var(--blue);
+}
+
+.triangle:nth-of-type(8) {
+    border-left: var(--inclination) solid var(--light-blue);
+    border-bottom: var(--nav-height) solid transparent;
+}
+
+/* MAIN */
+
+.main {
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo {
+    max-width: 90%;
+}
+
+/* CONTACT */
+
+.contact {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact ul {
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+@media (max-width: 1350px) {
+
+    .main {
+        height: auto;
+    }
+
+    .wrapper {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-div {
+        justify-content: center;
+        margin: 80px 0 0 0;
+    }
+
+    .logo {
+        width: min(800px, 80%);
+    }
+
+    .image {
+        width: 100vw;
+        content: url(/Images/image2.png)
+    }
+}
+
+@media (max-width: 740px) {
+    html {
+        font-size: small;
+    }
+}
