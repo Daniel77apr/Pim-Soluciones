@@ -33,12 +33,12 @@ nav div:not(.triangle) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8em;
+    width: 8rem;
     transition: width 0.3s;
 }
   
 nav div:hover:not(.triangle) {
-    width: 10em;
+    width: 10rem;
     cursor: pointer;
 }
 
@@ -129,7 +129,13 @@ nav div:hover:not(.triangle) {
 }
 
 @media (max-width: 740px) {
-    nav div:not(.triangle) {
-        font-size: 12px;
+    :root {
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        font-size: x-small;
     }
 }
