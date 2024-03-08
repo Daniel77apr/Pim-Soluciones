@@ -16,6 +16,7 @@
 
 html {
     font-family: "Roboto", sans-serif;
+    font-size: 16px;
 }
 
 /* NAV-BAR */
@@ -130,6 +131,6 @@ nav div:hover:not(.triangle) {
 
 @media (max-width: 740px) {
     html {
-        font-size: small;
+        font-size: 12px;
     }
 }
